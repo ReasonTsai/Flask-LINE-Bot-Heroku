@@ -24,7 +24,7 @@ def callback():
         body = request.get_data(as_text=True)
 
         try:
-            handler.handle(body, signature)
+            handler.handle('許逸亭快念書', signature)
         except InvalidSignatureError:
             abort(400)
 
