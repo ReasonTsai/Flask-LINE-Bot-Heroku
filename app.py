@@ -24,7 +24,7 @@ def callback():
         body = request.get_data(as_text=True)
 
         try:
-            handler.handle('123', signature)
+            handler.handle(body, signature)
         except InvalidSignatureError:
             abort(400)
 
